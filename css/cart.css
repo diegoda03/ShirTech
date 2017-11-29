@@ -1,0 +1,40 @@
+#cartTop{
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+#cartTop > img{
+  width: 30px;
+  height: 30px;
+}
+.headerRow{
+ width: 15%;
+ margin-left: 5%;
+ float: left;
+ }
+ .itemRow{
+ width: 15%;
+ margin-left: 2%;
+ float: left;
+ }
+ .simpleCart_items{
+   display: grid;
+ }
+ .item-decrement{
+
+ float: left;
+ }
+ .itemRow > .item-quantity{
+
+ margin-left: 8px;
+ float: left;
+ }
+ .simpleCart_increment{
+
+ margin-left: 8px;
+ }
+ .simpleCart_empty{
+
+ margin-left: 8%;
+ }

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shirtec</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
+    <script src='js/ajax.js'></script>
+    <script src='js/store.js'></script>
+    <script src="js/simpleCart.js"></script>
+	<script>
+		simpleCart.currency({
+		    code: "COP" ,
+		    name: "Colombian peso" ,
+		    symbol: "$"
+		})
+    /*simpleCart({
+    checkout: {
+        type: "SendForm" ,
+        url: "http://127.0.0.1:3000/venta"
+    }
+});*/
+
+	</script>
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+    <div id="cartTop" class="bg-faded">
+      <img class="cart" src="img/cart.png" /><br>
+      <span class="simpleCart_quantity carTop"></span><span class="carTop"> items - </span><span class="simpleCart_total carTop"></span>
+      <br>
+      <b>
+	    <a href="javascript:;" class="simpleCart_checkout">Checkout</a></b>
+    </div>
+
+
+    <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">ShirTech</div>
+    <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-5 d-none d-lg-block">Personaliza tus camsiteas y lucelas.</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="about.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="store.html">Tienda</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="contact.html">Contactanos</a>
+            </li>
+            <li class="nav-item px-lg-4">
+			  <a class="nav-link text-uppercase text-expanded" href="login.html">Login</a>
+			</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+    <div class="bg-faded p-4 my-4">
+        <hr class="divider">
+        <h2 class="text-center text-lg text-uppercase my-0">1 PASO:
+          <strong>ESCOGE EL DISEÑO</strong>
+        </h2>
+        <hr class="divider">
+        <div id='desingsContainer'>
+        <!--<div class="row">
+          <div class="column">
+            <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno" value="Diseño 1" onclick="capturarDiseno(this)">Seleccionar</button>
+            </div>
+          </div>
+
+          <div class="column">
+            <img src="img_fjords.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno2" value="Diseño 2" onclick="capturarDiseno2()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno3" value="Diseño 3" onclick="capturarDiseno3()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno4" value="Diseño 4" onclick="capturarDiseno4()">Seleccionar</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno5" value="Diseño 5" onclick="capturarDiseno5()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img_fjords.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno6" value="Diseño 6" onclick="capturarDiseno6()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno7" value="Diseño 7" onclick="capturarDiseno7()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonDiseno8" value="Diseño 8" onclick="capturarDiseno8()">Seleccionar</button>
+            </div>
+          </div>
+        </div>-->
+        </div>
+
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content" >
+            <div id="modal-content">
+          <!--  <div class="mySlides">
+              <div class="numbertext">1 / 8</div>
+              <img src="img_nature_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 8</div>
+              <img src="img_fjords_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 8</div>
+              <img src="img_mountains_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 8</div>
+              <img src="img_lights_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 8</div>
+              <img src="img_nature_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">6 / 8</div>
+              <img src="img_fjords_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">7 / 8</div>
+              <img src="img_mountains_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">8 / 8</div>
+              <img src="img_lights_wide.jpg" style="width:100%">
+            </div>-->
+          </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+            <div id='rowsGalery'>
+            <!--<div class="row">
+              <div class="column">
+                <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_fjords_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_fjords_wide.jpg" style="width:100%" onclick="currentSlide(6)" alt="Trolltunga, Norway">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(7)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(8)" alt="Northern Lights">
+              </div>
+            </div>-->
+          </div>
+
+
+          </div>
+        </div>
+
+        <script>
+        function openModal() {
+          document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+          document.getElementById('myModal').style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+
+        function capturarDiseno(element)
+        {
+            //var botonDiseno=document.getElementsByName("botonDiseno")[0].value;
+            document.getElementById("resultadoDiseno").innerHTML=" \
+                "+element.value;
+        }
+/*
+
+        function capturarDiseno2()
+        {
+          var botonDiseno2=document.getElementsByName("botonDiseno2")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno2;
+        }
+
+        function capturarDiseno3()
+        {
+          var botonDiseno3=document.getElementsByName("botonDiseno3")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno3;
+        }
+
+        function capturarDiseno4()
+        {
+          var botonDiseno4=document.getElementsByName("botonDiseno4")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno4;
+        }
+
+        function capturarDiseno5()
+        {
+            var botonDiseno5=document.getElementsByName("botonDiseno5")[0].value;
+            document.getElementById("resultadoDiseno").innerHTML=" \
+                "+botonDiseno5;
+        }
+
+
+        function capturarDiseno6()
+        {
+          var botonDiseno6=document.getElementsByName("botonDiseno6")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno6;
+        }
+
+        function capturarDiseno7()
+        {
+          var botonDiseno7=document.getElementsByName("botonDiseno7")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno7;
+        }
+
+        function capturarDiseno8()
+        {
+          var botonDiseno8=document.getElementsByName("botonDiseno8")[0].value;
+              document.getElementById("resultadoDiseno").innerHTML=" \
+                  "+botonDiseno8;
+        }
+///////////////////
+*/
+        function capturarEstilo()
+        {
+            var botonEstilo=document.getElementsByName("botonEstilo")[0].value;
+            document.getElementById("resultadoEstilo").innerHTML=" \
+                "+botonEstilo;
+        }
+
+
+        function capturarEstilo2()
+        {
+          var botonEstilo2=document.getElementsByName("botonEstilo2")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo2;
+        }
+
+        function capturarEstilo3()
+        {
+          var botonEstilo3=document.getElementsByName("botonEstilo3")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo3;
+        }
+
+        function capturarEstilo4()
+        {
+          var botonEstilo4=document.getElementsByName("botonEstilo4")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo4;
+        }
+
+        function capturarEstilo5()
+        {
+            var botonEstilo5=document.getElementsByName("botonEstilo5")[0].value;
+            document.getElementById("resultadoEstilo").innerHTML=" \
+                "+botonEstilo5;
+        }
+
+
+        function capturarEstilo6()
+        {
+          var botonEstilo6=document.getElementsByName("botonEstilo6")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo6;
+        }
+
+        function capturarEstilo7()
+        {
+          var botonEstilo7=document.getElementsByName("botonEstilo7")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo7;
+        }
+
+        function capturarEstilo8()
+        {
+          var botonEstilo8=document.getElementsByName("botonEstilo8")[0].value;
+              document.getElementById("resultadoEstilo").innerHTML=" \
+                  "+botonEstilo8;
+        }
+
+        </script>
+
+
+        <div class="bg-faded p-4 my-4">
+        <hr class="divider">
+        <h2 class="text-center text-lg text-uppercase my-0">2 PASO:
+          <strong>ESCOGER UBICACIÓN</strong>
+        </h2>
+        <hr class="divider">
+
+         <div class="row">
+          <div class="column">
+            <img src="t-shirt-T1.png" style="width:100%"  class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo" value="Tipo 1" onclick="capturarEstilo()">Seleccionar</button>
+          </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T2.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo2" value="Tipo 2" onclick="capturarEstilo2()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T3.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo3" value="Tipo 3" onclick="capturarEstilo3()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T4.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo4" value="Tipo 4" onclick="capturarEstilo4()">Seleccionar</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="t-shirt-T5.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo5" value="Tipo 5" onclick="capturarEstilo5()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T6.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo6" value="Tipo 6" onclick="capturarEstilo6()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T7.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo7" value="Tipo 7" onclick="capturarEstilo7()">Seleccionar</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="t-shirt-T8.png" style="width:100%" class="hover-shadow cursor">
+            <div class="trans text-center">
+            <button name="botonEstilo8" value="Tipo 8" onclick="capturarEstilo8()">Seleccionar</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-faded p-4 my-4">
+        <hr class="divider">
+        <h2 class="text-center text-lg text-uppercase my-0">3 PASO:
+          <strong>FINALIZA LA CREACIÓN</strong>
+        </h2>
+        <hr class="divider">
+
+        <div class="simpleCart_shelfItem">
+
+
+        <p>Diseño:
+          <label id="resultadoDiseno" class="item_name"></label>
+        </p>
+        <p>Ubicación:
+          <label id="resultadoEstilo" class="item_Ubicacion"></label>
+        </p>
+
+        <p>Tipo de camiseta:
+        <select id="tipoC" onchange="getColor(this.value)" class="item_Type">
+
+        </select>
+        </p>
+
+        <p>Talla:
+        <select id="talla" class="item_Size" onchange="getDisponible()">
+          <option value="S">Small</option>
+          <option value="M">Medium</option>
+          <option value="L">Large</option>
+          <option value="XL">Extra Large</option>
+        </select></p>
+        <p>Color:
+        <select id="colorCamisa" onchange="getDisponible()" class="item_Color">
+        <!--  <option value="Negro">Negro</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Azul">Azul</option>
+          <option value="Rojo">Rojo</option>
+          <option value="Amarillo">Amarillo</option>
+          <option value="Verde">Verde</option>
+          <option value="Gris">Gris</option>
+          <option value="Jaspe">Gris Jaspe</option>-->
+        </select></p>
+        <p>Disponible: <label id="disponible"></label></p>
+        <p>Cantidad:
+        <select id="cantidad" class="item_Quantity">
+        <!--  <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>-->
+        </select></p>
+        <p>Precio: <span class="item_price">$29,000</span></p>
+        <button class="btn btn-lg item_add">Add to cart</button>
+        </div>
+    </div>
+
+    <div>
+
+      <h2 class="text-center">Detalles de la compra </h2>
+
+    	<div class="simpleCart_items"></div>
+
+    		<a href="javascript:;" class="simpleCart_empty">Limpiar</a>
+    </div>
+
+
+    </div>
+    </div>
+
+    <!-- /.container -->
+
+
+
+    <footer class="bg-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">Copyright &copy; ShirTech 2017</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+  </body>
+
+</html>
